@@ -7,8 +7,9 @@ class QuizBrain:
 
 
 
-
     def nextQuestion(self):
+        Score = 0
+
         istrue = True
         while istrue:
             current_question = self.question_list[self.question_number].text
@@ -17,6 +18,9 @@ class QuizBrain:
             print(self.question_list[self.question_number].Answer)
             if self.question_list[self.question_number].Answer == current_respon:
                 self.question_number +=1
+
+                Score +=10
+                print(f"You own score :{Score}")
             else:
                 istrue = False
 
