@@ -1,5 +1,6 @@
 import time
 from turtle import Turtle, Screen
+import food as t
 
 screen = Screen()
 screen.setup(600, 600)
@@ -19,6 +20,7 @@ for i in position:
     snakes_component.append(snake)
 
 isalive = True
+t.food()
 
 
 def snake_forward():
