@@ -1,9 +1,16 @@
 import random
 from turtle import Turtle
-import Game
-game = Game()
-position = [200,-200]
+
+
+
+position = [200, -200]
+d1 = random.choice(position)
+d2 = random.choice(position)
+
+
 class food(Turtle):
+    a1 = d1
+    a2 = d2
     def __init__(self):
         super().__init__()
         self.shape("circle")
@@ -11,8 +18,5 @@ class food(Turtle):
         self.color("blue")
         self.penup()
         self.speed("fastest")
-        a = self.goto(random.choice(position),random.choice(position))
-        print(game.snakes_component[0].xcor())
-        if(random.choice(position) == game.snakes_component[0].xcor()):
-           print("trigger")
+        self.goto(d1,d2)
 
