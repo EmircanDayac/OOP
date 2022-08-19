@@ -9,7 +9,7 @@ screen.title("Turtle-Run")
 Player()
 CarManager()
 
-if Player().turtle_list[0].distance(CarManager):
+if Player().turtle_list[0].distance(CarManager.Cars):
     print("gir2")
     Turtle.write(f"Game Over", align="center", font=("arial", 24, "normal"))
 

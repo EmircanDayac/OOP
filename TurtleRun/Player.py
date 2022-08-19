@@ -1,11 +1,11 @@
 from turtle import Turtle, Screen
 from ScoreBoard import ScoreBoard
-
+Y = ScoreBoard()
 screen = Screen()
 screen.listen()
 turtle_list = []
 
-ScoreBoard()
+
 
 
 class Player(Turtle):
@@ -23,13 +23,8 @@ class Player(Turtle):
 def up():
     turtle_list[0].forward(20)
     if (turtle_list[0].xcor() > 290.0):
-        ScoreBoard().increase_Score()
-        print("giriyor")
+        Y.increase_Score()
         turtle_list[0].goto(-250, 0)
-
-
-def GameOver():
-    pass
 
 
 screen.onkey(up, "Up")

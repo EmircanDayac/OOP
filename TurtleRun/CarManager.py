@@ -2,13 +2,11 @@ import random
 import time
 from turtle import Turtle
 
-speed = [20,30,40,50]
+speed = [20, 30, 40, 50]
 Cars_Generate_Position = [100, 200, -100, -200]
 Cars = []
 
 levelbool = False
-
-Turtle.speed("fastest")
 
 class CarManager():
     def __init__(self):
@@ -30,5 +28,3 @@ class CarManager():
                 turt.forward(random.choice(speed))
                 if turt.ycor() > 300:
                     turt.goto(random.choice(Cars_Generate_Position), -200)
-
-
